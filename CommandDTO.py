@@ -1,10 +1,11 @@
 class CommandDTO:
-    def __init__(self, role: str, tone: str, prompt: str, limit = 150, temperature = 1):
+    def __init__(self, role: str="yourself", tone: str="neutral", prompt: str="random comment", limit = 150, temperature = 1, imgURL = None):
         self.__role = role
         self.__tone = tone
         self.__prompt = prompt
         self.__limit = limit
         self.__temperature = temperature
+        self.__imgURL = imgURL
 
     @property
     def role(self) -> str:
@@ -24,3 +25,7 @@ class CommandDTO:
     @property
     def temperature(self) -> float:
         return self.__temperature
+
+    @property
+    def imgURL(self) -> str:
+        return self.__imgURL

@@ -1,6 +1,6 @@
 from abc import ABC, abstractmethod
 
-from CommandDTO import CommandDTO
+from chatbot.CommandDTO import CommandDTO
 
 
 
