@@ -1,5 +1,5 @@
 class CommandDTO:
-    def __init__(self, role: str="yourself", tone: str="neutral", prompt: str="random comment", limit = 150, temperature = 1, imgURL = None, history: list = None):
+    def __init__(self, role: str="yourself", tone: str="neutral", prompt: str="random comment", limit = 150, temperature = 1, imgURL = None, history: list = None, responseFormat:str = str):
         self.__role = role
         self.__tone = tone
         self.__prompt = prompt
@@ -7,6 +7,7 @@ class CommandDTO:
         self.__temperature = temperature
         self.__imgURL = imgURL
         self.__history = history
+        self.__responseFormat = responseFormat
 
     @property
     def role(self) -> str:
@@ -38,3 +39,7 @@ class CommandDTO:
     @property
     def history(self) -> list:
         return self.__history
+
+    @property
+    def responseFormat(self) -> str:
+        return self.__responseFormat
